@@ -23,7 +23,7 @@
                                 <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan kata sandi " required>
                             </div>
                             <div class="col mb-3 text-center">
-                                <a href="/" type="submit" name="login" class="btn btn-custom"><strong>LOGIN</strong></a>
+                                <button type="submit" name="login" class="btn btn-custom"><strong>LOGIN</strong></button>
                             </div>
                         </form>
                     </div>
