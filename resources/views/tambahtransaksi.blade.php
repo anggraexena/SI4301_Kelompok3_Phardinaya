@@ -37,8 +37,9 @@
                 <div class="container">
                     <div class="card" style="background-color: #FAEBE0;">
                         <div class="card-body">
-                        <form action="" method="GET" >
-                    <div class="row">
+                        <form action="/post_transaksi" method="POST" >
+                        @csrf
+                        <div class="row">
                         <div class="col">
                             <div class="form-group mb-2">
                                 <label for="name">Kode Obat</label>
@@ -55,8 +56,8 @@
                         </div>
                         <div class="col">
                             <div class="form-group mb-2">
-                                <label for="harga">Harga</label>
-                                <input type="text" class="form-control" name ="harga" placeholder="Masukkan Harga"/>
+                                <label for="total">Bayar</label>
+                                <input type="number" class="form-control" name ="bayar" placeholder="Masukkan Harga"/>
                             </div>
                         </div>
                     </div>
@@ -79,9 +80,10 @@
                     <div class="row">
                         <div class="col">
                             <a class="btn btn-outline-danger mt-3 ps-5 pe-5">Batal</a>
-                            <a href="/transaksi" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Simpan</a>
+                            <button type="submit" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Simpan</a>
                         </div>
                     </div>
+                </form>
                         </div>
                     </div>
                 </div>

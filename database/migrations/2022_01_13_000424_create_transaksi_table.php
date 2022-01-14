@@ -16,11 +16,11 @@ class CreateTransaksiTable extends Migration
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id('id_transaksi');
             $table->integer('id_pegawai');
-            $table->integer('kode_obat');
+            $table->string('kode_obat');
             $table->integer('qty');
             $table->timestamp('tgl_transaksi');
-            $table->integer('sub_total');
-            $table->integer('total');
+            $table->integer('sub_total')->nullable();
+            $table->integer('total')->nullable();
             $table->string('metode_pembayaran');
             $table->string('diskon');
             $table->integer('total_bayar');
