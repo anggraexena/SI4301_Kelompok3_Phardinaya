@@ -6,7 +6,13 @@
     <div class="container">
         <div class="greetings">
           <br>
-          <h2>Selamat Datang, Maulana!</h2>
+          <h2>Selamat Datang, 
+            @if(\Auth::check())
+              {{ Auth::user()->nama_pegawai }}
+            @else
+              NULL
+            @endif
+          </h2>
         </div>
         <div class="row mt-4">
           <div class="col">

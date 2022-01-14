@@ -12,14 +12,15 @@
                             <h6><strong>Login</strong></h6>
                             <hr style="border: 1px solid gray">
                         </div>
-                        <form action="" method="POST">
+                        <form action="/post_login" method="POST">
+                        @csrf
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
-                                <input type="username" name="username" class="form-control" id="username" placeholder="Masukkan username" />
+                                <label for="username" class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" id="username" placeholder="Masukkan username" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Kata Sandi</label>
-                                <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan kata sandi "/>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan kata sandi " required>
                             </div>
                             <div class="col mb-3 text-center">
                                 <button type="submit" name="login" class="btn btn-custom"><strong>LOGIN</strong></button>

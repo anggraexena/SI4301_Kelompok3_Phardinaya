@@ -43,45 +43,55 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="container">
-        <!-- Menu navbar -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/catalog">Obat</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Transaksi
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="/transaksi">Daftar Transaksi</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-list-4">
-            <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll me-5">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarScrolling" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="25" height="25" class="rounded-circle">
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrolling">
-                  <li><a class="dropdown-item" href="/detailpegawai">Profile</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Logout </a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+          @if(\Auth::check())
+              <!-- Menu navbar -->
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/catalog">Obat</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Transaksi
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="/transaksi">Daftar Transaksi</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-list-4">
+                  <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll me-5">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarScrolling" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="25" height="25" class="rounded-circle">
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarScrolling">
+                        <li><a class="dropdown-item" href="/detailpegawai">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/logout">Logout </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+          @else
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                </li>
+              </ul>
+          @endif
+          
       </div>
     </div>
+  </div>
 </nav>
 <!-- Akhir Navbar -->
 
