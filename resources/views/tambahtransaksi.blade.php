@@ -20,18 +20,6 @@
                     <img src="img/creditcard.png" class="img-fluid" alt="">
                 </div>
                 <!-- Membuat halaman -->
-            <?php
-            // Membuat pilihan untuk gambar yang redirect ke dalam button Book Now
-                // error_reporting(0);
-                // $pilihGedung = $_GET['pilihGedung'];
-                // if ($pilihGedung == 'cozy-hall') {
-                // echo '<img src = "./img/CozyHall.jpg" class="card-img-top" style="padding-right:50px">';
-                // } elseif ($pilihGedung == 'meeting-hall') {
-                // echo '<img src = "./img/MeetingHall.jpg" class="card-img-top" style="padding-right:50px">';
-                // } else {
-                // echo '<img src = "./img/minimalistHall.jpg" class="card-img-top" style="padding-right:50px">';
-                // }
-            ?>
             </div>
             <div class="col-md-7">
                 <div class="container">

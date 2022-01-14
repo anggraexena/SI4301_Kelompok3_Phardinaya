@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\PegawaiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/login', function () {
-    if(\Auth::check()){
+    if(Auth::check()){
         return redirect('/');
     }else{
         return view('login');
@@ -33,9 +34,7 @@ Route::get('/detailobat/{index}', [ObatController::class, 'detail_obat'])->name(
 Route::get('/editobat', function () {
     return view('editobat');
 });
-Route::get('/transaksi', function () {
-    return view('transaksi');
-});
+Route::get('/transaksi', [TransaksiController::class, 'index']);
 Route::post('/post_obat', [ObatController::class, 'post_obat']);
 Route::post('/edit_obat/{index}', [ObatController::class, 'edit_obat'])->name('editobat');
 Route::get('/edit_page_obat/{index}', [ObatController::class, 'edit_page_obat']);
@@ -52,4 +51,9 @@ Route::get('/detailpegawai', function () {
 });
 Route::get('/pegawai', function () {
     return view('pegawai');
+});
+
+Route::post('/edit_pegawai/{index}', [PegawaiController::class, 'edit_pegawai'])->name('editpegawai');
+Route::get('/editpegawai', function () {
+    return view('editpegawai');
 });

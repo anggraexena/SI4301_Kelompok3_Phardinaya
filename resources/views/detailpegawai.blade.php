@@ -6,7 +6,7 @@
     <div class="container">
         <div class="greetings">
           <br>
-          <h2>Detail Pegawai</h2>
+          <h2>Profil</h2>
         </div>
     </div>
 </section>
@@ -38,21 +38,21 @@
               <div class="col-md-7">
                 <!-- Membuat link ke halaman Booking dengan method GET -->
                   <div class="row mt-3">
-                    <span class="mt-3"><strong>Nama </strong><br>Mahardika Maulana</span>
-                    <span class="mt-3"><strong>Email </strong><br>mahardika@telkom</span>
-                    <span class="mt-3"><strong>No. HP </strong><br>08131287121</span>
-                    <span class="mt-3"><strong>Alamat </strong><br>Jl. abc no.1 abc, asdf, asdf</span>
+                    <span class="mt-3"><strong>Nama </strong><br>{{ Auth::user()->nama_pegawai }}</span>
+                    <span class="mt-3"><strong>Email </strong><br>{{ Auth::user()->email }}</span>
+                    <span class="mt-3"><strong>No. HP </strong><br>{{ Auth::user()->nohp_pegawai }}</span>
+                    <span class="mt-3"><strong>Alamat </strong><br>{{ Auth::user()->alamat_pegawai }}</span>
                   </div>
                   <div class="row mt-3">
                     <div class="col">
-                      <span><strong>Tanggal Lahir</strong><br>01/01/2000</span>
+                      <span><strong>Tanggal Lahir</strong><br>{{ Auth::user()->tgllahir_pegawai }}</span>
                     </div>
                     <div class="col">
-                      <span><strong>Lama Bekerja</strong><br>2 Tahun</span>
+                      <span><strong>Lama Bekerja</strong><br>{{ Auth::user()->lama_bekerja }} Tahun</span>
                     </div>
                   </div>
                   <a href="/editpegawai" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Edit</a>
-                  <a href="" class="btn mt-3 ps-5 pe-5" style="color:white; background-color:#56776C;">Hubungi</a>
+                  <a href="tel:{{ Auth::user()->nohp_pegawai }}" class="btn mt-3 ps-5 pe-5" style="color:white; background-color:#56776C;">Hubungi</a>
                   
               </div>
             </div>

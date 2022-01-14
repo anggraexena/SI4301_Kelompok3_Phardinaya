@@ -6,7 +6,7 @@
     <div class="container">
         <div class="title mb-3">
           <br>
-          <h2>Edit Obat</h2>
+          <h2>Edit Profil</h2>
         </div>
     </div>
 </section>
