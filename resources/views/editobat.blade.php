@@ -115,7 +115,7 @@
                     <div class="row">
                         <div class="col">
                             <a class="btn btn-outline-danger mt-3 ps-5 pe-5">Batal</a>
-                            <a class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Edit</a>
+                            <a href="/catalog" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Simpan</a>
                         </div>
                     </div>
                 </div>

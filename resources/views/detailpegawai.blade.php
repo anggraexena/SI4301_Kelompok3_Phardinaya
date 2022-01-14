@@ -51,8 +51,8 @@
                       <span><strong>Lama Bekerja</strong><br>2 Tahun</span>
                     </div>
                   </div>
-                  <a href="/editobat" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Edit</a>
-                  <a href="/editobat" class="btn mt-3 ps-5 pe-5" style="color:white; background-color:#56776C;">Hubungi</a>
+                  <a href="/editpegawai" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Edit</a>
+                  <a href="" class="btn mt-3 ps-5 pe-5" style="color:white; background-color:#56776C;">Hubungi</a>
                   
               </div>
             </div>
