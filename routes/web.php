@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ObatController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +38,7 @@ Route::get('/editobat', function () {
 Route::get('/transaksi', function () {
     return view('transaksi');
 });
+Route::post('/post_obat', [ObatController::class, 'post_obat']);
 Route::get('/tambahobat', function () {
     return view('tambahobat');
 });
