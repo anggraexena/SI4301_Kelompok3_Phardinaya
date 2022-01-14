@@ -12,6 +12,7 @@
 </section>
 <!-- Akhir Konten -->
       <!-- Membuat bagian form -->
+      
     <section id="formulir">
       <div class="container">
           <div class="card-body">
@@ -20,53 +21,42 @@
                 <div>
                   <img src="img/obat-panadol.png" class="img-fluid" alt="">
                 </div>
-                <!-- Membuat halaman -->
-              <?php
-              // Membuat pilihan untuk gambar yang redirect ke dalam button Book Now
-                  // error_reporting(0);
-                  // $pilihGedung = $_GET['pilihGedung'];
-                  // if ($pilihGedung == 'cozy-hall') {
-                  // echo '<img src = "./img/CozyHall.jpg" class="card-img-top" style="padding-right:50px">';
-                  // } elseif ($pilihGedung == 'meeting-hall') {
-                  // echo '<img src = "./img/MeetingHall.jpg" class="card-img-top" style="padding-right:50px">';
-                  // } else {
-                  // echo '<img src = "./img/minimalistHall.jpg" class="card-img-top" style="padding-right:50px">';
-                  // }
-              ?>
               </div>
 
               <div class="col-md-7">
                 <!-- Membuat link ke halaman Booking dengan method GET -->
                   <div class="row">
                     <div class="col">
-                      <span><strong>Kode Obat </strong> : PCT</span>
+                      <span><strong>Kode Obat </strong> : {{ $o -> kode_obat }}</span>
                     </div>
                     <div class="col">
                       <span><strong>No Batch</strong> : B10/121/1</span>
                     </div>
                   </div>
                   <div class="row mt-3">
-                    <span><strong>Nama Obat</strong> : Paracetamol</span>
-                    <span class="mt-3"><strong>Deskripsi</strong> : Obat pracetamol adalah obat untuk  meredakan rasa sakit </span>
-                    <span class="mt-3"><strong>Kategori</strong>: Obat Bebas</span>
-                    <span class="mt-3"><strong>Stok</strong> : 100 pcs</span>
-                    <span class="mt-3"><strong>Berat</strong> : 100 mg</span>
-                    <span class="mt-3"><strong>Tanggal Kadaluarsa</strong> : 12 12 2024</span>
+                    <span><strong>Nama Obat</strong> : {{ $o -> nama_obat }}</span>
+                    <span class="mt-3"><strong>Deskripsi</strong> : {{ $o -> deskripsi_obat }}</span>
+                    <span class="mt-3"><strong>Kategori</strong>: {{ $o -> kategori }}</span>
+                    <span class="mt-3"><strong>Stok</strong> : {{ $o -> stok }}</span>
+                    <span class="mt-3"><strong>Berat</strong> : {{ $o -> berat_satuan }}</span>
+                    <span class="mt-3"><strong>Tanggal Kadaluarsa</strong> : {{ $o -> tgl_expired }}</span>
                   </div>
                   <div class="row mt-3">
                     <div class="col">
-                      <span><strong>Harga Jual</strong> : Rp 10.000</span>
+                      <span><strong>Harga Jual</strong> : Rp {{ $o -> harga_jual }}</span>
                     </div>
                     <div class="col">
-                      <span><strong>Harga Beli</strong> : Rp 5000</span>
+                      <span><strong>Harga Beli</strong> : Rp {{ $o -> harga_beli}}</span>
                     </div>
                   </div>
-                  <a href="/editobat" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Edit</a>
+                  <a href="/edit_page_obat/{{$o -> kode_obat}}" class="btn btn-custom mt-3 ps-5 pe-5" style="color:white">Edit</a>
+                  <a href="/hapus_obat/{{$o -> kode_obat}}" class="btn btn-danger mt-3 ps-5 pe-5" style="color:white">Hapus</a>
                   
               </div>
             </div>
           </div>
       </div>
     </section>
+ 
 
 @endsection

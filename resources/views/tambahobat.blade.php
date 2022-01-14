@@ -25,13 +25,13 @@
                                 <div class="col">
                                     <div class="form-group mb-2">
                                         <label for="name">Kode Obat</label>
-                                        <input type="text" class="form-control" name ="kodeobat" placeholder="Masukkan kode Obat" value=""/>
+                                        <input type="text" class="form-control" name ="kodeobat" placeholder="Masukkan kode obat" value=""/>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group mb-2">
                                         <label for="nobatch">No Batch</label>
-                                        <input type="text" class="form-control" name ="nobatch" placeholder="Masukkan no Bacth" value=""/>
+                                        <input type="text" class="form-control" name ="nobatch" placeholder="Masukkan no batch" value=""/>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                                     <div class="col">
                                         <div class="form-group mb-2">
                                             <label for="hargajual">Harga Jual</label>
-                                            <input type="text" class="form-control" name ="hargajual" placeholder="Masukkan Harga " value=""/>
+                                            <input type="text" class="form-control" name ="hargajual" placeholder="Masukkan Harga Jual" value=""/>
                                         </div>
                                     </div>
                             </div>

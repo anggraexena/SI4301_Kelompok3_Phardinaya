@@ -27,12 +27,9 @@ Route::get('/login', function () {
 });
 Route::post('/post_login', [LoginController::class, 'post_login']);
 Route::get('/logout', [LoginController::class, 'logout']);
-Route::get('/catalog', function () {
-    return view('catalog');
-});
-Route::get('/detailobat', function () {
-    return view('detailobat');
-});
+Route::get('/catalog', [ObatController::class, 'index']);
+Route::get('/detailobat/{index}', [ObatController::class, 'detail_obat'])->name('detail_obat');
+
 Route::get('/editobat', function () {
     return view('editobat');
 });
@@ -40,6 +37,9 @@ Route::get('/transaksi', function () {
     return view('transaksi');
 });
 Route::post('/post_obat', [ObatController::class, 'post_obat']);
+Route::post('/edit_obat/{index}', [ObatController::class, 'edit_obat'])->name('editobat');
+Route::get('/edit_page_obat/{index}', [ObatController::class, 'edit_page_obat']);
+Route::get('/hapus_obat/{index}', [ObatController::class, 'hapus_obat']);
 Route::get('/tambahobat', function () {
     return view('tambahobat');
 });

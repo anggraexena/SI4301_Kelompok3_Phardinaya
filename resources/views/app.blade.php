@@ -58,9 +58,6 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                     <li><a class="dropdown-item" href="/transaksi">Daftar Transaksi</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </li>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,7 +100,7 @@
     <div class="col-md-12 text-center">
         <p>Made with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-        </svg> ©2021 Apotek Yazid.All Right Reserved.</p>
+        </svg> ©2021 Apotek Yazid.  Right Reserved.</p>
     </div>
 </footer>
 <!-- Akhir footer -->

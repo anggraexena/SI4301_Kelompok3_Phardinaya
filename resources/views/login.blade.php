@@ -16,7 +16,7 @@
                         @csrf
                             <div class="mb-3">
                                 <label for="username" class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" id="username" placeholder="Masukkan username" required>
+                                <input type="email" name="email" class="form-control" id="username" placeholder="Masukkan email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Kata Sandi</label>

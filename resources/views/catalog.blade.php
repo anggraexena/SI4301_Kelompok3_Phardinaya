@@ -17,49 +17,25 @@
             </form>
          </div>
        </div>
+
+       
         <div class="row">
+          @foreach($o as $obat)
           <div class="col mb-3 md-3">
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="img/obat-panadol.png" alt="Card image cap">
               <div class="card-body">
-                  <h5 class="card-title"><strong>Panadol</strong></h5>
+                  <h5 class="card-title"><strong>{{ $obat -> nama_obat }}</strong></h5>
                   <div class="isi">
-                    <p class="harga"> Rp 25.000</p>
-                    <p class="kategori"> Panadol merupakan obat Flu dan Batuk</p>
-                    <p class="kadaluarsa text-muted">11/11/2022</p>
+                    <p class="harga">{{ $obat -> harga_beli }}</p>
+                    <p class="kategori">{{ $obat -> deskripsi_obat }}</p>
+                    <p class="kadaluarsa text-muted">{{ $obat -> tgl_expired}}</p>
                   </div>
-                  <a style="text-decoration:none" href="/detailobat" class="text-success "><strong>Lihat Detail</strong></a>
+                  <a style="text-decoration:none" href="/detailobat/{{$obat -> kode_obat}}" class="text-success "><strong>Lihat Detail</strong></a>
               </div>
             </div>
           </div>
-          <div class="col mb-3 md-3">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="img/obat-panadol.png" alt="Card image cap">
-              <div class="card-body">
-                  <h5 class="card-title"><strong>Panadol</strong></h5>
-                  <div class="isi">
-                    <p class="harga"> Rp 25.000</p>
-                    <p class="kategori"> Panadol merupakan obat Flu dan Batuk</p>
-                    <p class="kadaluarsa text-muted">11/11/2022</p>
-                  </div>
-                  <a style="text-decoration:none" href="/detailobat" class="text-success "><strong>Lihat Detail</strong></a>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-3 md-3">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="img/obat-panadol.png" alt="Card image cap">
-              <div class="card-body">
-                  <h5 class="card-title"><strong>Panadol</strong></h5>
-                  <div class="isi">
-                    <p class="harga"> Rp 25.000</p>
-                    <p class="kategori"> Panadol merupakan obat Flu dan Batuk</p>
-                    <p class="kadaluarsa text-muted">11/11/2022</p>
-                  </div>
-                  <a style="text-decoration:none" href="/detailobat" class="text-success "><strong>Lihat Detail</strong></a>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
     </div>
 </section>
